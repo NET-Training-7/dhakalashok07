@@ -1,6 +1,6 @@
 using System;
 
-
+using EmployeeDetails;
 // MethodLearning obj = new();
 // obj.Display();
 
@@ -18,6 +18,11 @@ using System;
 // string s = obj.Greet();
 // Console.WriteLine(s);
 
+//Phone phone1 = new();
+//phone1.Brand = "samsung";
+//phone1.Model = "S 22";
+//phone1.ReleaseDate = new DateTime(2022, 12, 12);
+//
 // string today = obj.GetDay();
 // Console.WriteLine(today);
 
@@ -46,14 +51,36 @@ using System;
 
 // Test test1 = new();
 
-Methods_Asssignments obj = new();
+//Methods_Asssignments obj = new();
 
-double m1 = obj.CalculateProductOfSquare(2, 3);
-Console.WriteLine("The product of square of two supplied number is " + m1);
+//double m1 = obj.CalculateProductOfSquare(2, 3);
+//Console.WriteLine("The product of square of two supplied number is " + m1);
 
-double m2 = obj.CalculateCubeRoot(23);
-Console.WriteLine("The cuberoot of given number is " + m2);
+//double m2 = obj.CalculateCubeRoot(23);
+//Console.WriteLine("The cuberoot of given number is " + m2);
 
 
-float m3 = obj.CalculateBMI(48, 5.6f);
-Console.WriteLine("The BMI index of a person by giving weight as 62 Kg and height of 1.7 m is " + m3);
+//float m3 = obj.CalculateBMI(48, 5.6f);
+//Console.WriteLine("The BMI index of a person by giving weight as 62 Kg and height of 1.7 m is " + m3);
+
+//var car1 = new CombustionEngine("Car", "Nexon", "Tata", 4, "BA.33.PA 234", 1500f);
+
+//car1.PrintDetails();
+//var flight1 = new FirstClassFlight("AI-101", "New York", "London", new DateTime(2023, 2, 10, 9, 30, 0), "America");
+//flight1.Book();
+
+//var flight2 = new InternationalFlight("AI-102", "New York", "Paris", new DateTime(2023, 2, 11, 11, 0, 0), "Canada");
+//flight2.DisplayFlightDetails();
+            Employee employee = new Employee();
+            employee.EmployeeId = "A001";
+            employee.Name = "Ram Acharya";
+            employee.Salary = 50000;
+            employee.Department = "IT";
+
+            Console.WriteLine("Employee Details: ");
+            Console.WriteLine("Employee ID: " + employee.EmployeeId);
+            Console.WriteLine("Name: " + employee.Name);
+            Console.WriteLine("Salary: " + employee.Salary);
+            Console.WriteLine("Department: " + employee.Department);
+
+            Employee.PrintEmployeeDetails(employee);
