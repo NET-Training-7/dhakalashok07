@@ -1,8 +1,8 @@
 using System;
 
-class DataType
+class DataType  //DataType vaneko (class ho)
 {
-    void LearnDataTypes()
+    void LearnDataTypes()  // 
     {
         
 // Numbers (Signed(+/-) and unsigned(+))
