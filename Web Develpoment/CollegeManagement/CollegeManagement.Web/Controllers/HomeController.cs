@@ -60,7 +60,7 @@ namespace CollegeManagement.Web.Controllers
         public IActionResult LearnAdoNET()
         {
             //Fetch student data from student table 
-            string connectionString = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=CollegeDb_test;Integrated Security=True;";
+            string connectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=CollegeDb_test;Integrated Security=True;";
             SqlConnection connection = new SqlConnection(connectionString);
             SqlCommand command = new SqlCommand("Select * from dbo.Student", connection);
 
