@@ -1,10 +1,23 @@
-﻿@model Student   
+﻿@model Student
 
 <form class="row g-3">
     <div class="col-md-6">
         <label class="form-label">Name</label>
         <p class="form-control">@Model.Name</p>
     </div>
+    <div class="col-md-6">
+        <label class="form-label">Gender</label>
+        <p class="form-control">@Model.Gender</p>
+    </div>
+    <div class="col-md-6">
+        <label class="form-label">Address</label>
+        <p class="form-control">@Model.Address</p>
+    </div>
+    <div class="col-md-6">
+        <label class="form-label">Date Of Birth</label>
+        <p class="form-control">@Model.Dob</p>
+    </div>
+
     <div class="col-md-6">
         <label class="form-label">Roll Number</label>
         <p class="form-control">@Model.RollNo</p>
@@ -21,4 +34,9 @@
         <label class="form-label">Contact</label>
         <p class="form-control">@Model.Contact</p>
     </div>
-</form>          @*from students controlller.cs ko details*@         
+    <div class="col-md-6">
+        <a class="btn btn-success" href="/students"><i class="bi bi-arrow-left"></i> Back to Students</a>
+    </div>
+
+</form>
+@*from students controlller.cs ko details*@         
