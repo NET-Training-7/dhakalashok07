@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using CollegeManagement.Web.Models;
 using CollegeManagement.Web.Data;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 //using System.Reflection.Metadata.Ecma335;
 namespace CollegeManagement.Web.Controllers;
 public class StudentsController : Controller
@@ -53,6 +54,9 @@ public class StudentsController : Controller
     [HttpPost]
     public IActionResult Add(Student student)
     {
+        if (student == null || !ModelState.IsValid)
+            return View("Error", new ErrorViewModel { RequestId = "Register Student" });
+
         db.Students.Add(student);
         db.SaveChanges();
 

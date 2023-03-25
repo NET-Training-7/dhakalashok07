@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 
 namespace CollegeManagement.Web.Models;
 public class Student
@@ -8,6 +9,9 @@ public class Student
     [DisplayName("Roll Number")]
     public int RollNo { get; set; }
 
+    [Required(ErrorMessage = "We need your name."), ]
+    [MinLength(2, ErrorMessage = "At least 2 letters please.")]
+    [RegularExpression(@"[A-Za-z]+", ErrorMessage = "Only alpahbets and space are allowed.")]
     public string? Name { get; set; }
     public string? Address { get; set; }
     public string? Gender { get; set; }
@@ -21,23 +25,6 @@ public class Student
     public string? Semester { get; set; }
 
 }
-//using System.ComponentModel.DataAnnotations;
 
-//namespace CollegeManagement.Web.Models;
-//public class Student
-//{
-//    [Key]
-//    public int Id { get; set; }
-//    public int RollNo { get; set; }
-//    public string? Name { get; set; }
-
-//    public string?Address { get; set; }
-//    public string? Gender { get; set; }
-//    public DateTime? Dob { get; set; }
-//    public string? Contact { get; set; }
-//    public string? Email { get; set; }
-//    public string? Major { get; set; }
-//    public string? Semester { get; set; }
-//}
 
 ///*=string.Empty;*/ //public pachadi ? or = string.Empty any one will work
